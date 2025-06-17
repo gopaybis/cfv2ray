@@ -1,0 +1,22 @@
+name = "vpn"
+main = "build/worker/shim.mjs"
+compatibility_date = "2024-05-23"
+minify = true
+
+account_id = "793fd1ab0ae250be09d2ff86bc324964"
+workers_dev = true
+
+[[kv_namespaces]]
+binding = "YUMI"
+id = "16fba7f4ba5b4dbc895a0822e42b5f33"
+
+[build]
+command = "cargo install worker-build && worker-build --release"
+
+[env.dev]
+build = { command = "cargo install worker-build && worker-build --dev" }
+
+[vars]
+UUID = "aacac2d2-cac8-442a-9f2c-4e4f807065f5"
+MAIN_PAGE_URL = "https://raw.githubusercontent.com/gopaybis/vpnv2ray/refs/heads/main/web/index.html"
+SUB_PAGE_URL = "https://raw.githubusercontent.com/gopaybis/vpnv2ray/refs/heads/main/web/sub.html"
